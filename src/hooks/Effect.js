@@ -7,6 +7,7 @@ export const Effect = () => {
   //   useEffect(() => {
   //     console.log("onMount");
   //   }, []);
+  // UseEffect works asynchronously it works while the DOM has been loading on screen it does not blocks the execution of DOM update
   // Eg. of componentDidMount it will be executed only once at time the components will be first mounted
   //   useEffect(() => {
   //     fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)

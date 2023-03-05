@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { Context } from "./hooks/Context";
 import { Effect } from "./hooks/Effect";
+import { LayoutEffect } from "./hooks/LayoutEffect";
 import { Memo } from "./hooks/Memo";
 import { Ref } from "./hooks/Ref";
 import { State } from "./hooks/State";
@@ -18,7 +19,8 @@ function App() {
         <Context />
       </ThemeProvider> */}
       {/* <Ref /> */}
-      <Memo />
+      {/* <Memo /> */}
+      <LayoutEffect />
     </div>
   );
 }

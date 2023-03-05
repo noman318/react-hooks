@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 
 export const Memo = () => {
   const [number, setNumber] = useState(0);
@@ -6,10 +6,16 @@ export const Memo = () => {
   const doubleNumber = useMemo(() => {
     return slowCalculation(number);
   }, [number]);
-  const darkStyles = {
-    backgroundColor: dark ? "black" : "white",
-    color: dark ? "white" : "black",
-  };
+  const darkStyles = useMemo(() => {
+    return {
+      backgroundColor: dark ? "black" : "white",
+      color: dark ? "white" : "black",
+    };
+  }, [dark]);
+
+  useEffect(() => {
+    console.log("theme changed");
+  }, [darkStyles]);
   return (
     <div>
       <h2>Memo</h2>
